@@ -1,0 +1,7 @@
+{
+  "name": "village-app-ionic7",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
