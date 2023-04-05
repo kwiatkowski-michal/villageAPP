@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">villageAPP</string>
+    <string name="title_activity_main">villageAPP</string>
+    <string name="package_name">village.app.ionic7</string>
+    <string name="custom_url_scheme">village.app.ionic7</string>
+</resources>
