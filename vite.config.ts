@@ -14,6 +14,7 @@ export default defineConfig({
         "name": "villageAPP - Kruszyn Krajeński",
         "description": "Aplikacja mobilna dla wsi Kruszyn Krajeński",
         "lang": "pl",
+        "id": "io.villageapp.kruszynkraj",
         "orientation": "portrait",
         "shortcuts": [
           {
