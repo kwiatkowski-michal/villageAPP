@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      injectRegister: 'inline',
       includeAssets: ['maskable_icon.png', 'maskable_icon_x192.png', 'icon.svg'],
       manifest: {
         "short_name": "villageAPP",
