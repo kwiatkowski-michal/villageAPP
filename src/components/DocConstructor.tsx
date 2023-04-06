@@ -12,6 +12,7 @@ interface ContainerProps {
 }
 
 const Doc: React.FC<ContainerProps> = ({title, subtitle, content, type, isButton, buttonLink}) => {
+  
   const buttons= [];
   if (isButton==="true") {
     buttons.push(
