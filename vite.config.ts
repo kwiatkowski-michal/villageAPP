@@ -21,7 +21,7 @@ export default defineConfig({
             "short_name": "Dokumenty",
             "description": "Wyświetl wszystkie dokumenty",
             "url": "/dokumenty",
-            "icons": [{ "src": "/icons/maskable_icon_x192.png", "sizes": "192x192", "type": "image/x-icon" }]
+            "icons": [{ "src": "/icons/maskable_icon_x512.png", "sizes": "512x512", "type": "image/x-icon" }]
           }
         ],
         "icons": [
@@ -33,16 +33,6 @@ export default defineConfig({
           {
             "src": "/icons/maskable_icon_x512.png",
             "sizes": "512x512",
-            "type": "image/x-icon"
-          },
-          {
-            "src": "/icons/maskable_icon_x192.png",
-            "sizes": "192x192",
-            "type": "image/x-icon"
-          },
-          {
-            "src": "/icons/maskable_icon_x384.png",
-            "sizes": "384x384",
             "type": "image/x-icon"
           },
           {
