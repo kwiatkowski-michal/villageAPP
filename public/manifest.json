@@ -50,5 +50,5 @@
   "display": "standalone",
   "scope": "/",
   "theme_color": "#000",
-  "background_color": "#000"
+  "background_color": "#fff"
 }
