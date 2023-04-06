@@ -1,7 +1,17 @@
 {
   "short_name": "villageAPP",
   "name": "villageAPP - Kruszyn Krajeński",
-
+  "description": "Aplikacja mobilna dla wsi Kruszyn Krajeński",
+  "lang": "pl",
+  "orientation": "portrait",
+  "shortcuts": [
+    {
+      "name": "Wyświetl wszystkie dokumenty",
+      "short_name": "Dokumenty",
+      "description": "Wyświetl wszystkie dokumenty",
+      "url": "/dokumenty"
+    }
+  ],
   "icons": [
     {
       "src": "/icons/maskable_icon.png",
