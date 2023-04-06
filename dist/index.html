@@ -8,7 +8,7 @@
   <meta name="description" content="Oficjalna aplikacja mobilna Kruszyna Krajeńskiego">
   <link rel="icon" href="/icons/maskable_icon.png">
   <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#000000">
   <meta name="viewport"
     content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
@@ -50,7 +50,7 @@
     rel="apple-touch-startup-image" />
   <script type="module" crossorigin src="/assets/index-344f6a3c.js"></script>
   <link rel="stylesheet" href="/assets/index-029c6491.css">
-<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:inline-sw">if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/sw.js', { scope: '/' })})}</script></head>
 
 <body>
   <div id="root"></div>
