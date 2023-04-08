@@ -3,27 +3,12 @@ import { IonHeader, IonToolbar, IonButtons, IonBackButton, IonButton, IonTitle, 
 import { caretBack, chevronBackOutline } from 'ionicons/icons';
 
 interface ContainerProps {
-    title: string;
-    content: string;
-    subtitle: string;
-    type: string;
-    isButton: string;
-    buttonLink: string | undefined,
+          description: string | null
+          dl_link: string | null
+          title: string | null
 }
 
-const Doc: React.FC<ContainerProps> = ({title, subtitle, content, type, isButton, buttonLink}) => {
-  
-  const buttons= [];
-  if (isButton==="true") {
-    buttons.push(
-      <IonButton target='_blank' href={buttonLink}>
-            Pobierz
-      </IonButton>
-    );
-  }
-  else {
-      buttons.push("");
-  }
+const Doc: React.FC<ContainerProps> = ({title, description, dl_link}) => {
     return (
         <>
       <IonHeader>
@@ -31,15 +16,13 @@ const Doc: React.FC<ContainerProps> = ({title, subtitle, content, type, isButton
           <IonButtons slot="start">
             <IonBackButton text="Dokumenty" icon={chevronBackOutline}></IonBackButton>
           </IonButtons>
-          <IonTitle>{type}</IonTitle>
+          <IonTitle>Dokument</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
         <h1>{title}</h1>
-        <p>{content}</p>
-        {buttons.map((button) => (
-          button
-        ))}
+        <p>{description}</p>
+        {dl_link && <IonButton href={dl_link} target="_blank" fill="outline">Pobierz pismo</IonButton>}
       </IonContent>
     </>
     );
