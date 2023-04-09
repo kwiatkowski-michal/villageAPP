@@ -1,11 +1,21 @@
 import React from 'react';
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonIcon, IonChip, IonAvatar, IonLabel } from '@ionic/react';
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonIcon, IonChip, IonAvatar, IonLabel, IonRefresher, IonRefresherContent, RefresherEventDetail } from '@ionic/react';
 import village from "./village.json";
 import './Description.css'
 import { closeCircle, colorFillOutline, peopleOutline } from 'ionicons/icons';
-const Opis: React.FC = () => {
+function Opis(){
+    function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
+        setTimeout(() => {
+            window.location.reload();
+          event.detail.complete();
+        }, 1000);
+      }
+
     return (
         <>
+            <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
+              <IonRefresherContent></IonRefresherContent>
+            </IonRefresher>
             <IonCard>
                 <IonCardHeader>
                     <IonCardTitle>Liczba mieszkańców</IonCardTitle>

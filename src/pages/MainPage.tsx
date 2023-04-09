@@ -1,23 +1,22 @@
-import { IonActionSheet, IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
+import { IonActionSheet, IonButton, IonButtons, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonPage, IonRow, IonTitle, IonToolbar, RefresherEventDetail } from '@ionic/react';
 import React from 'react';
 import Opis from '../components/Description';
 import { ellipsisHorizontal, ellipsisVertical, handLeftOutline, homeOutline } from 'ionicons/icons';
 import './MainPage.css';
 const StronaGlowna: React.FC = () => {
-  function refreshPage() {
-    window.location.reload();
+  function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
+    setTimeout(() => {
+      // Any calls to load data go here
+      event.detail.complete();
+    }, 2000);
   }
+  
   return (
     <>
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Strona główna</IonTitle>
-          <IonButtons slot="primary">
-              <IonButton id='open-action-sheet'>
-                <IonIcon slot="icon-only" lazy={true} ios={ellipsisHorizontal} md={ellipsisVertical}></IonIcon>
-              </IonButton>
-            </IonButtons>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen={true}>
@@ -29,25 +28,6 @@ const StronaGlowna: React.FC = () => {
         <Opis />
       </IonContent>
     </IonPage>
-    <IonActionSheet
-    trigger="open-action-sheet"
-    header="Opcje"
-    buttons={[
-      {
-        text: 'Sprawdź aktualizacje',
-        data: {
-          action: {refreshPage}
-        }
-      },
-      {
-        text: 'Wyjdź',
-        role: 'cancel',
-        data: {
-          action: 'cancel'
-        }
-      }
-    ]}
-  ></IonActionSheet>
   </>
   );
 };

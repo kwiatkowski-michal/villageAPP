@@ -1,11 +1,12 @@
 import React from "react";
-import { IonPage, IonHeader, IonContent, IonToolbar, IonTitle, IonNavLink } from "@ionic/react";
+import { IonPage, IonHeader, IonContent, IonToolbar, IonTitle, IonNavLink, IonRefresher, IonRefresherContent, RefresherEventDetail } from "@ionic/react";
 import Docs from "../components/DocAllCards";
 
 
 const Example: React.FC = () => {
     return (
         <IonPage>
+            
           <IonHeader>
             <IonToolbar>
               <IonTitle>Dokumenty</IonTitle>

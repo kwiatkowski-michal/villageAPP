@@ -1,5 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from '@ionic/react';
+import { IonApp, IonIcon, IonLabel, IonRefresher, IonRefresherContent, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, RefresherEventDetail, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { document, home, trash } from 'ionicons/icons';
 /* Core CSS required for Ionic components to work properly */
@@ -25,8 +25,10 @@ import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC = () => (
+function App() {
+  return (
   <IonApp>
+    
     <IonReactRouter>
       <IonTabs>
       <IonRouterOutlet>
@@ -43,6 +45,7 @@ const App: React.FC = () => (
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
+          
         </IonRouterOutlet>
         <IonTabBar slot="bottom" translucent={true}>
           <IonTabButton tab="StronaGlowna" href="/home">
@@ -57,10 +60,11 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={document} />
             <IonLabel>Dokumenty</IonLabel>
           </IonTabButton>
+          
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
   </IonApp>
-);
-
+)
+}
 export default App;

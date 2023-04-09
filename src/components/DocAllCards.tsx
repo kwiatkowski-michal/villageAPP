@@ -1,12 +1,22 @@
 import React from "react";
 import items from "../components/docs.json"
-import { IonNavLink } from "@ionic/react";
+import { IonNavLink, IonRefresher, IonRefresherContent, RefresherEventDetail } from "@ionic/react";
 import DocConst from "../components/DocConstructor";
 import DocCardConst from "../components/DocCardCostructor";
 
 const Example: React.FC = () => {
+    function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
+        setTimeout(() => {
+            window.location.reload();
+          event.detail.complete();
+        }, 1000);
+      }
+
     return (
         <>
+            <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
+              <IonRefresherContent></IonRefresherContent>
+            </IonRefresher>
             {items.map((item, index) => (
                 <IonNavLink
                     key={index}
