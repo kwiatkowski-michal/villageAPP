@@ -1,6 +1,8 @@
 import React from 'react';
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle } from '@ionic/react';
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonIcon, IonChip, IonAvatar, IonLabel } from '@ionic/react';
 import village from "./village.json";
+import './Description.css'
+import { closeCircle, colorFillOutline, peopleOutline } from 'ionicons/icons';
 const Opis: React.FC = () => {
     return (
         <>
@@ -31,6 +33,7 @@ const Opis: React.FC = () => {
                     Wyślij e-mail
                 </IonButton>
             </IonCard>
+        
             <IonCard>
                 <IonCardHeader>
                     <IonCardTitle>Rada sołecka</IonCardTitle>
