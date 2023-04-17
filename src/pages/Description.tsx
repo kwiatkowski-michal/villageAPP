@@ -68,7 +68,7 @@ const DescriptionMain: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Inormacje ogólne o miejscowości</IonTitle>
+          <IonTitle>Informacje ogólne</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen={true}>
