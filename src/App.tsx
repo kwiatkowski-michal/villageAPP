@@ -1,11 +1,12 @@
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonIcon, IonLabel, IonRefresher, IonRefresherContent, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, RefresherEventDetail, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { document, home, trash } from 'ionicons/icons';
+import { document, home, information, informationCircle, informationCircleOutline, trash } from 'ionicons/icons';
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 import Dokumenty from './pages/DocsMain';
-import StronaGlowna from './pages/MainPage';
+import Home from './pages/Home'
+import Description from './pages/Description';
 import WywozSmieci from './pages/Garbage';
 /* Basic CSS for apps built with Ionic */
 import '@ionic/react/css/normalize.css';
@@ -34,9 +35,9 @@ function App() {
       <IonRouterOutlet>
           <Redirect exact path="/" to="/home" />
           <Route exact path="/home">
-            <StronaGlowna />
+            <Home />
           </Route>
-          <Route exact path="/smeici">
+          <Route exact path="/smieci">
             <WywozSmieci />
           </Route>
           <Route path="/dokumenty">
@@ -45,6 +46,9 @@ function App() {
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
+          <Route exact path="/informacje">
+            <Description />
+          </Route>
           
         </IonRouterOutlet>
         <IonTabBar slot="bottom" translucent={true}>
@@ -52,7 +56,11 @@ function App() {
             <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>Strona głowna</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="smieci" href="/smeici">
+          <IonTabButton tab="info" href="/informacje">
+            <IonIcon aria-hidden="true" icon={informationCircle} />
+            <IonLabel>Informacje ogólne</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="smieci" href="/smieci">
             <IonIcon aria-hidden="true" icon={trash} />
             <IonLabel>Wywóz śmieci</IonLabel>
           </IonTabButton>

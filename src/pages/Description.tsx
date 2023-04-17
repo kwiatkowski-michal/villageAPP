@@ -1,9 +1,8 @@
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, } from '@ionic/react';
 import React from 'react';
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonIcon, IonChip, IonAvatar, IonLabel, IonRefresher, IonRefresherContent, RefresherEventDetail } from '@ionic/react';
+import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCardSubtitle, IonRefresher, IonRefresherContent, RefresherEventDetail } from '@ionic/react';
 import village from "./village.json";
-import './Description.css'
-import { closeCircle, colorFillOutline, peopleOutline } from 'ionicons/icons';
-function Opis(){
+function Description(){
     function handleRefresh(event: CustomEvent<RefresherEventDetail>) {
         setTimeout(() => {
             window.location.reload();
@@ -59,5 +58,30 @@ function Opis(){
             </IonCard>
         </>
     );
+}
+
+
+const DescriptionMain: React.FC = () => {
+  
+  return (
+    <>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Inormacje ogólne o miejscowości</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen={true}>
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large" >Informacje ogólne</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <Description/>
+      </IonContent>
+    </IonPage>
+  </>
+  );
 };
-export default Opis;
+
+export default DescriptionMain;
