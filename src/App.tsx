@@ -7,7 +7,6 @@ import '@ionic/react/css/core.css';
 import Dokumenty from './pages/DocsMain';
 import Home from './pages/Home'
 import Description from './pages/Description';
-import WywozSmieci from './pages/Garbage';
 /* Basic CSS for apps built with Ionic */
 import '@ionic/react/css/normalize.css';
 import '@ionic/react/css/structure.css';
@@ -37,9 +36,6 @@ function App() {
           <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path="/smieci">
-            <WywozSmieci />
-          </Route>
           <Route path="/dokumenty">
             <Dokumenty />
           </Route>
@@ -54,15 +50,11 @@ function App() {
         <IonTabBar slot="bottom" translucent={true}>
           <IonTabButton tab="StronaGlowna" href="/home">
             <IonIcon aria-hidden="true" icon={home} />
-            <IonLabel>Strona głowna</IonLabel>
+            <IonLabel>Menu głowne</IonLabel>
           </IonTabButton>
           <IonTabButton tab="info" href="/informacje">
             <IonIcon aria-hidden="true" icon={informationCircle} />
             <IonLabel>Informacje ogólne</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="smieci" href="/smieci">
-            <IonIcon aria-hidden="true" icon={trash} />
-            <IonLabel>Wywóz śmieci</IonLabel>
           </IonTabButton>
           <IonTabButton tab="docs" href="/dokumenty">
             <IonIcon aria-hidden="true" icon={document} />
