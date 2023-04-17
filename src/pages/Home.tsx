@@ -7,7 +7,7 @@ function Cards(){
         <>
         <IonCard>
       <IonCardHeader>
-        <IonCardTitle><h1 style={{lineHeight: 0}}>Witaj w aplikacji Kruszyna Krajeńskiego!</h1></IonCardTitle>
+        <IonCardTitle>Witaj w aplikacji Kruszyna Krajeńskiego!</IonCardTitle>
       </IonCardHeader>
       <IonCardContent>
        <h2>Znajdziesz poniżej wszystkie informacje o Kruszynie Krajeńskim, podstawowe informacje czy najważniejsze dokumenty dla mieszkańców.</h2>
